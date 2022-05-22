@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Head from "next/head";
 const Home = () => {
   const [createdLink, setCreatedLink] = useState("");
   const [url, setUrl] = useState("");
@@ -31,7 +32,10 @@ const Home = () => {
   };
   return (
     <>
-      <div data-aos="fade-up">
+      <Head>
+        <title>Home</title>
+      </Head>
+      <div>
         <div className=" w-full">
           <div className="">
             <div className="container m-auto px-6 md:pt-32 md:px-12 lg:pt-[4.8rem] lg:px-7">

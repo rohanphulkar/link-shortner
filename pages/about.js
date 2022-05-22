@@ -1,8 +1,12 @@
 import React from "react";
 import { FiGithub, FiInstagram } from "react-icons/fi";
+import Head from "next/head";
 const About = () => {
   return (
     <div>
+      <Head>
+        <title>About</title>
+      </Head>
       <div className="py-20 bg-gray-50">
         <div className="container mx-auto px-6 md:px-12">
           <div className="mb-16 text-center">

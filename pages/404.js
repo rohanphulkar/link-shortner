@@ -1,8 +1,12 @@
 import React from "react";
 import Link from "next/link";
+import Head from "next/head";
 const NotFound = () => {
   return (
     <div>
+      <Head>
+        <title>Not Found</title>
+      </Head>
       <section className="flex items-center h-full p-16 dark:bg-coolGray-900 dark:text-coolGray-100">
         <div className="container flex flex-col items-center justify-center px-5 mx-auto my-8">
           <div className="max-w-md text-center">

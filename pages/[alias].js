@@ -1,11 +1,19 @@
 import React, { useEffect } from "react";
+import Head from "next/head";
 const Alias = ({ data }) => {
   function handleClick() {
     // do something meaningful, Promises, if/else, whatever, and then
     window.location.assign(`${data.link}`);
   }
   useEffect(() => handleClick());
-  return <div className="text-center text-3xl">Redirecting.....</div>;
+  return (
+    <>
+      <Head>
+        <title>Redirecting....</title>
+      </Head>
+      <div className="text-center text-3xl">Redirecting.....</div>
+    </>
+  );
 };
 
 export default Alias;
