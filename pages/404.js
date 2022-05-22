@@ -1,5 +1,5 @@
 import React from "react";
-
+import Link from "next/link";
 const NotFound = () => {
   return (
     <div>
@@ -12,13 +12,11 @@ const NotFound = () => {
             <p className="text-2xl font-semibold md:text-3xl my-6">
               Sorry, we couldn&apos;t find this page.
             </p>
-            <a
-              rel="noopener noreferrer"
-              href="/"
-              className="px-8 py-3 font-semibold rounded bg-gray-900 hover:bg-gray-800 text-white"
-            >
-              Back to homepage
-            </a>
+            <Link href="/">
+              <a className="px-8 py-3 font-semibold rounded bg-gray-900 hover:bg-gray-800 text-white">
+                Back to homepage
+              </a>
+            </Link>
           </div>
         </div>
       </section>
