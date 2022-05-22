@@ -5,8 +5,10 @@ const Home = () => {
   const [createdLink, setCreatedLink] = useState("");
   const [url, setUrl] = useState("");
   const [clickToCopy, setClickToCopy] = useState("Click to copy");
+  const [loading, setLoading] = useState(false);
   const handleSubmit = (e) => {
     e.preventDefault();
+    setLoading(true);
     fetch(`https://linkrr-backend.herokuapp.com/link/add`, {
       method: "POST",
       body: JSON.stringify({
@@ -19,6 +21,7 @@ const Home = () => {
       .then((response) => response.json())
       .then((data) => {
         setCreatedLink(data["alias"]);
+        setLoading(false);
         toast.success("Link successfully created", {
           position: "top-center",
           autoClose: 4000,
@@ -53,9 +56,17 @@ const Home = () => {
                         onChange={(e) => setUrl(e.target.value)}
                       />
                       <button className="ml-auto py-3 px-6 rounded-full text-center transition bg-gradient-to-b from-gray-700 to-gray-900 hover:to-gray-600  focus:from-gray-900 md:px-12">
-                        <span className="text-yellow-50 font-semibold ">
-                          Create
-                        </span>
+                        {loading ? (
+                          <div className="flex items-center justify-center space-x-2 p-2">
+                            <div className="w-2 h-2 rounded-full animate-pulse bg-white" />
+                            <div className="w-2 h-2 rounded-full animate-pulse bg-white" />
+                            <div className="w-2 h-2 rounded-full animate-pulse bg-white" />
+                          </div>
+                        ) : (
+                          <span className="text-yellow-50 font-semibold ">
+                            Create
+                          </span>
+                        )}
                       </button>
                     </div>
                   </form>
