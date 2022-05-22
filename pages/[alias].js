@@ -13,7 +13,7 @@ export default alias;
 export async function getServerSideProps(context) {
   const { params } = context;
   const { alias } = params;
-  const res = await fetch(`http://localhost:3001/link/${alias}`);
+  const res = await fetch(`https://linkrr-backend.herokuapp.com/link/${alias}`);
   const data = await res.json();
   return {
     props: {

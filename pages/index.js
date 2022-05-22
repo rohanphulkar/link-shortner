@@ -7,7 +7,7 @@ const index = () => {
   const [clickToCopy, setClickToCopy] = useState("Click to copy");
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch(`http://localhost:3001/link/add`, {
+    fetch(`https://linkrr-backend.herokuapp.com/link/add`, {
       method: "POST",
       body: JSON.stringify({
         link: url,
@@ -71,7 +71,7 @@ const index = () => {
                             className="text-base cursor-pointer md:text-lg font-medium"
                             target="_blank"
                           >
-                            ‘http://localhost:8000/{createdLink}’
+                            ‘https://linkrr.xyz/{createdLink}’
                           </a>
                         </div>
                       </div>
@@ -79,7 +79,7 @@ const index = () => {
                         type="button"
                         onClick={() => {
                           navigator.clipboard.writeText(
-                            `http://localhost:8000/${createdLink}`
+                            `https://linkrr.xyz/${createdLink}`
                           );
                           setClickToCopy("Copied !");
                           setTimeout(() => {
@@ -102,7 +102,7 @@ const index = () => {
                   <img
                     src="/img/hero.svg"
                     className=""
-                    alt="food illustration"
+                    alt="hero"
                     loading="lazy"
                     width={450}
                     height={450}
