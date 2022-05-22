@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-const index = () => {
+const Home = () => {
   const [createdLink, setCreatedLink] = useState("");
   const [url, setUrl] = useState("");
   const [clickToCopy, setClickToCopy] = useState("Click to copy");
@@ -118,4 +118,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Home;

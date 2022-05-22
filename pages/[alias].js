@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-const alias = ({ data }) => {
+const Alias = ({ data }) => {
   function handleClick() {
     // do something meaningful, Promises, if/else, whatever, and then
     window.location.assign(`${data.link}`);
@@ -8,7 +8,7 @@ const alias = ({ data }) => {
   return <div className="text-center text-3xl">Redirecting.....</div>;
 };
 
-export default alias;
+export default Alias;
 
 export async function getServerSideProps(context) {
   const { params } = context;

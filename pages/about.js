@@ -1,6 +1,6 @@
 import React from "react";
 import { FiGithub, FiInstagram } from "react-icons/fi";
-const about = () => {
+const About = () => {
   return (
     <div>
       <div className="py-20 bg-gray-50">
@@ -11,7 +11,7 @@ const about = () => {
             </h2>
             <p className="text-gray-800 lg:w-8/12 text-lg lg:mx-auto">
               Linkrr is a free web link shortener that allows you to shorten any
-              link, and keep track of all the URLs you've shortened.
+              link, and keep track of all the URLs you&apos;ve shortened.
             </p>
           </div>
           <div className="grid mx-auto">
@@ -34,6 +34,7 @@ const about = () => {
                   href="https://github.com/rohanphulkar/"
                   target="_blank"
                   aria-label="github"
+                  rel="noreferrer"
                 >
                   <FiGithub size={28} />
                 </a>
@@ -41,6 +42,7 @@ const about = () => {
                   href="https://ww.instagram.com/_rohanphulkar/"
                   target="_blank"
                   aria-label="instagram"
+                  rel="noreferrer"
                 >
                   <FiInstagram size={28} />
                 </a>
@@ -53,4 +55,4 @@ const about = () => {
   );
 };
 
-export default about;
+export default About;
